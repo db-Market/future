@@ -44,6 +44,11 @@
     .page { display: none; }
     .page.on { display: block; }
     .nav-link.on { background: var(--color-background-info); color: var(--color-text-info); border-color: transparent; font-weight: 500; }
+    @media (max-width: 768px) {
+      .grid3 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .grid2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      
+    }
   </style>
   <style id="mcp-host-variables">:root {
   --color-background-primary: light-dark(rgba(255, 255, 255, 1), rgba(48, 48, 46, 1));
@@ -179,7 +184,7 @@
   </div>
 
   <div class="grid2">
-    <div class="card">
+    <div class="card bg-info-subtle" >
       <h3>CoinDCX Futures Setup</h3>
       <div class="step-row"><span class="step-num">1</span><p>App ખોલો → Futures Tab → Account ચાલુ કરો</p></div>
       <div class="step-row"><span class="step-num">2</span><p>Margin transfer: Spot wallet → Futures wallet</p></div>
@@ -216,7 +221,7 @@
   </div>
 
   <div class="grid2">
-    <div class="card">
+    <div class="card bg-info-subtle" >
       <h3>🟢 ENTRY ક્યારે?</h3>
       <p><strong>Best Times:</strong></p>
       <p>🕔 <strong>6:30 PM – 9:00 PM IST</strong> (NY + London overlap)</p>
@@ -229,7 +234,7 @@
       <p>📉 Support/Resistance bounce confirm</p>
       <p>📢 News/sentiment positive</p>
     </div>
-    <div class="card">
+    <div class="card bg-danger-subtle">
       <h3>🔴 EXIT ક્યારે?</h3>
       <p><strong>Profit Exit:</strong></p>
       <p>🎯 Target price hit = <strong>Exit કરો</strong></p>
@@ -333,9 +338,9 @@
     <table class="tbl">
       <thead><tr><th>Strategy</th><th>Risk</th><th>Target</th><th>Ratio</th></tr></thead>
       <tbody>
-        <tr><td>Conservative</td><td>1%</td><td>2%</td><td><span class="badge badge-green">1:2</span></td></tr>
-        <tr><td>Moderate</td><td>1%</td><td>3%</td><td><span class="badge badge-green">1:3</span></td></tr>
-        <tr><td>Aggressive</td><td>2%</td><td>4%</td><td><span class="badge badge-amber">1:2</span></td></tr>
+        <tr><td>Conservative</td><td>1%</td><td>2%</td><td><span class="badge text-bg-success">1:2</span></td></tr>
+        <tr><td>Moderate</td><td>1%</td><td>3%</td><td><span class="badge text-bg-success">1:3</span></td></tr>
+        <tr><td>Aggressive</td><td>2%</td><td>4%</td><td><span class="badge text-bg-danger">1:2</span></td></tr>
       </tbody>
     </table>
     <div class="success-box" style="margin-top:12px"><p>✅ Minimum 1:2 ratio maintain કરો – 50% win rate પણ profitable!</p></div>
