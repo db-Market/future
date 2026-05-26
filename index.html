@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Futures Trading Roadmap – CoinDCX માટે Entry/Exit ગાઈડ ગુજરાતીમાં</title>
+  <link rel="icon" type="image/png" href="./favicon.ico">
+  <style>
+    h2.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+    .section { margin: 0 0 20px; }
+    .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 20px; margin-bottom: 12px; }
+    .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; margin-right: 6px; }
+    .badge-green { background: var(--color-background-success); color: var(--color-text-success); }
+    .badge-red { background: var(--color-background-danger); color: var(--color-text-danger); }
+    .badge-amber { background: #FAEEDA; color: #854F0B; }
+    .badge-blue { background: var(--color-background-info); color: var(--color-text-info); }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-size: 13px; font-weight: 500; background: var(--color-background-info); color: var(--color-text-info); flex-shrink: 0; }
+    .step-row { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+    .step-row:last-child { margin-bottom: 0; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .mini-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
+    .label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
+    .val { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+    .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 14px 0; }
+    .tab-btns { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .tab-btn { font-size: 13px; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all .15s; }
+    .tab-btn.active { background: var(--color-background-info); color: var(--color-text-info); border-color: transparent; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .warn-box { background: #FAEEDA; border-left: 3px solid #EF9F27; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 10px; }
+    .danger-box { background: var(--color-background-danger); border-left: 3px solid var(--color-border-danger); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 10px; }
+    .success-box { background: var(--color-background-success); border-left: 3px solid var(--color-border-success); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 14px; margin-bottom: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th { font-weight: 500; text-align: left; padding: 7px 10px; background: var(--color-background-secondary); color: var(--color-text-secondary); }
+    .tbl td { padding: 8px 10px; border-top: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); }
+    .tbl tr:hover td { background: var(--color-background-secondary); }
+    h3 { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 12px; }
+    p, li { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin: 0 0 6px; }
+    strong { font-weight: 500; color: var(--color-text-primary); }
+    .nav-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+    .nav-tab { font-size: 13px; padding: 7px 16px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; font-weight: 400; }
+    .nav-tab.on { background: var(--color-background-info); color: var(--color-text-info); border-color: transparent; font-weight: 500; }
+    .page { display: none; }
+    .page.on { display: block; }
+    .nav-link.on { background: var(--color-background-info); color: var(--color-text-info); border-color: transparent; font-weight: 500; }
+  </style>
+  <style id="mcp-host-variables">:root {
+  --color-background-primary: light-dark(rgba(255, 255, 255, 1), rgba(48, 48, 46, 1));
+  --color-background-secondary: light-dark(rgba(245, 244, 237, 1), rgba(38, 38, 36, 1));
+  --color-background-tertiary: light-dark(rgba(250, 249, 245, 1), rgba(20, 20, 19, 1));
+  --color-background-inverse: light-dark(rgba(20, 20, 19, 1), rgba(250, 249, 245, 1));
+  --color-background-ghost: light-dark(rgba(255, 255, 255, 0), rgba(48, 48, 46, 0));
+  --color-background-info: light-dark(rgba(214, 228, 246, 1), rgba(37, 62, 95, 1));
+  --color-background-danger: light-dark(rgba(247, 236, 236, 1), rgba(96, 42, 40, 1));
+  --color-background-success: light-dark(rgba(233, 241, 220, 1), rgba(27, 70, 20, 1));
+  --color-background-warning: light-dark(rgba(246, 238, 223, 1), rgba(72, 58, 15, 1));
+  --color-background-disabled: light-dark(rgba(255, 255, 255, 0.5), rgba(48, 48, 46, 0.5));
+  --color-text-primary: light-dark(rgba(20, 20, 19, 1), rgba(250, 249, 245, 1));
+  --color-text-secondary: light-dark(rgba(61, 61, 58, 1), rgba(194, 192, 182, 1));
+  --color-text-tertiary: light-dark(rgba(115, 114, 108, 1), rgba(156, 154, 146, 1));
+  --color-text-inverse: light-dark(rgba(255, 255, 255, 1), rgba(20, 20, 19, 1));
+  --color-text-info: light-dark(rgba(50, 102, 173, 1), rgba(128, 170, 221, 1));
+  --color-text-danger: light-dark(rgba(127, 44, 40, 1), rgba(238, 136, 132, 1));
+  --color-text-success: light-dark(rgba(38, 91, 25, 1), rgba(122, 185, 72, 1));
+  --color-text-warning: light-dark(rgba(90, 72, 21, 1), rgba(209, 160, 65, 1));
+  --color-text-disabled: light-dark(rgba(20, 20, 19, 0.5), rgba(250, 249, 245, 0.5));
+  --color-text-ghost: light-dark(rgba(115, 114, 108, 0.5), rgba(156, 154, 146, 0.5));
+  --color-border-primary: light-dark(rgba(31, 30, 29, 0.4), rgba(222, 220, 209, 0.4));
+  --color-border-secondary: light-dark(rgba(31, 30, 29, 0.3), rgba(222, 220, 209, 0.3));
+  --color-border-tertiary: light-dark(rgba(31, 30, 29, 0.15), rgba(222, 220, 209, 0.15));
+  --color-border-inverse: light-dark(rgba(255, 255, 255, 0.3), rgba(20, 20, 19, 0.15));
+  --color-border-ghost: light-dark(rgba(31, 30, 29, 0), rgba(222, 220, 209, 0));
+  --color-border-info: light-dark(rgba(70, 130, 213, 1), rgba(70, 130, 213, 1));
+  --color-border-danger: light-dark(rgba(167, 61, 57, 1), rgba(205, 92, 88, 1));
+  --color-border-success: light-dark(rgba(67, 116, 38, 1), rgba(89, 145, 48, 1));
+  --color-border-warning: light-dark(rgba(128, 92, 31, 1), rgba(168, 120, 41, 1));
+  --color-border-disabled: light-dark(rgba(31, 30, 29, 0.1), rgba(222, 220, 209, 0.1));
+  --color-ring-primary: light-dark(rgba(20, 20, 19, 0.7), rgba(250, 249, 245, 0.7));
+  --color-ring-secondary: light-dark(rgba(61, 61, 58, 0.7), rgba(194, 192, 182, 0.7));
+  --color-ring-inverse: light-dark(rgba(255, 255, 255, 0.7), rgba(20, 20, 19, 0.7));
+  --color-ring-info: light-dark(rgba(50, 102, 173, 0.5), rgba(128, 170, 221, 0.5));
+  --color-ring-danger: light-dark(rgba(167, 61, 57, 0.5), rgba(205, 92, 88, 0.5));
+  --color-ring-success: light-dark(rgba(67, 116, 38, 0.5), rgba(89, 145, 48, 0.5));
+  --color-ring-warning: light-dark(rgba(128, 92, 31, 0.5), rgba(168, 120, 41, 0.5));
+  --font-sans: Anthropic Sans, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-text-xs-size: 12px;
+  --font-text-sm-size: 14px;
+  --font-text-md-size: 16px;
+  --font-text-lg-size: 20px;
+  --font-heading-xs-size: 12px;
+  --font-heading-sm-size: 14px;
+  --font-heading-md-size: 16px;
+  --font-heading-lg-size: 20px;
+  --font-heading-xl-size: 24px;
+  --font-heading-2xl-size: 28px;
+  --font-heading-3xl-size: 36px;
+  --font-text-xs-line-height: 1.4;
+  --font-text-sm-line-height: 1.4;
+  --font-text-md-line-height: 1.4;
+  --font-text-lg-line-height: 1.25;
+  --font-heading-xs-line-height: 1.4;
+  --font-heading-sm-line-height: 1.4;
+  --font-heading-md-line-height: 1.4;
+  --font-heading-lg-line-height: 1.25;
+  --font-heading-xl-line-height: 1.25;
+  --font-heading-2xl-line-height: 1.1;
+  --font-heading-3xl-line-height: 1;
+  --border-radius-xs: 4px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --border-radius-full: 9999px;
+  --border-width-regular: 0.5px;
+  --shadow-hairline: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}</style>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container" >
+    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">dbMarket</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="nav-tab on" onclick="showPage('basics')">📚 શરૂઆત</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-tab" onclick="showPage('timing')">⏰ Entry/Exit ટાઈમ</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-tab" onclick="showPage('strategy')">📈 સ્ટ્રેટેજી</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-tab" onclick="showPage('risk')">🛡️ રિસ્ક મેનેજમેન્ટ</button>
+        </li> 
+        <li class="nav-item">    
+          <button class="nav-tab" onclick="showPage('mistakes')">⚠️ ભૂલો ટાળો</button>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+  <h2 class="sr-only">Crypto Futures Trading Roadmap – CoinDCX માટે Entry/Exit ગાઈડ ગુજરાતીમાં</h2>
+
+  <div style="padding: 4px 0 0;">
+
+
+
+<!-- PAGE 1: BASICS -->
+<div id="page-basics" class="page on">
+  <div class="card">
+    <h3>🔰 Futures Trading એટલે શું?</h3>
+    <div class="step-row">
+      <span class="step-num">1</span>
+      <div><strong>Contract:</strong> <p>Future date ના price પર Buy/Sell કરવાનો contract. ખરેખર crypto ખરીદ્યા વગર profit/loss થાય.</p></div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">2</span>
+      <div><strong>Leverage:</strong> <p>ઓછા પૈસા વડે મોટો trade. ₹1000 ના 10x leverage = ₹10,000 નો position. ફાયદો અને નુકસાન બંને 10 ગણા.</p></div>
+    </div>
+    <div class="step-row">
+      <span class="step-num">3</span>
+      <div><strong>Long vs Short:</strong> <p>Long = price વધશે એવું માનીને Buy. Short = price ઘટશે એવું માનીને Sell.</p></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>CoinDCX Futures Setup</h3>
+      <div class="step-row"><span class="step-num">1</span><p>App ખોલો → Futures Tab → Account ચાલુ કરો</p></div>
+      <div class="step-row"><span class="step-num">2</span><p>Margin transfer: Spot wallet → Futures wallet</p></div>
+      <div class="step-row"><span class="step-num">3</span><p>Leverage set કરો (Beginner = 2x–5x)</p></div>
+      <div class="step-row"><span class="step-num">4</span><p>USDT-Margined pairs select કરો (BTC, ETH)</p></div>
+    </div>
+    <div class="card">
+      <h3>Beginner ટિપ્સ</h3>
+      <div class="warn-box" style="margin-bottom:8px"><p>💡 <strong>Testnet</strong> (demo) pehle try કરો.</p></div>
+      <p>✅ Leverage: 2x–3x (5x max)</p>
+      <p>✅ Per trade capital: 1%–2% જ</p>
+      <p>✅ Isolated margin use કરો</p>
+      <p>✅ Stop Loss: હંમેશા set કરો</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TIMING -->
+<div id="page-timing" class="page">
+  <div class="card">
+    <h3>⏰ Entry/Exit ક્યારે? – IST (India Standard Time)</h3>
+    <div class="warn-box">
+      <p>Crypto market 24/7 ખુલ્લું, પણ <strong>અમુક time zones વધુ active</strong> (volume + volatility) હોય છે.</p>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Session</th><th>IST Time</th><th>Activity</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-green">Asian</span></td><td>5:30 AM – 2:00 PM</td><td>Medium</td><td>Sideways / Range trade</td></tr>
+        <tr><td><span class="badge badge-amber">London</span></td><td>1:00 PM – 9:30 PM</td><td>High ↑</td><td>Breakout watch</td></tr>
+        <tr><td><span class="badge badge-red">US/NY</span></td><td>6:30 PM – 1:00 AM</td><td>🔥 Highest</td><td>Best Entry/Exit</td></tr>
+        <tr><td><span class="badge badge-blue">Overlap</span></td><td>6:30 PM – 9:00 PM</td><td>💥 Peak</td><td>Strongest signals</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>🟢 ENTRY ક્યારે?</h3>
+      <p><strong>Best Times:</strong></p>
+      <p>🕔 <strong>6:30 PM – 9:00 PM IST</strong> (NY + London overlap)</p>
+      <p>🕗 <strong>7:00 PM – 11:00 PM IST</strong> (US session active)</p>
+      <hr class="divider">
+      <p><strong>Entry Signal Check:</strong></p>
+      <p>📊 Volume spike – chart upswing</p>
+      <p>📈 RSI: 40–60 zone (no overbought)</p>
+      <p>🕯️ Strong candle close (15min/1hr)</p>
+      <p>📉 Support/Resistance bounce confirm</p>
+      <p>📢 News/sentiment positive</p>
+    </div>
+    <div class="card">
+      <h3>🔴 EXIT ક્યારે?</h3>
+      <p><strong>Profit Exit:</strong></p>
+      <p>🎯 Target price hit = <strong>Exit કરો</strong></p>
+      <p>📊 RSI 70+ (overbought) = Partial exit</p>
+      <p>🕯️ Reversal candle (Doji, Engulf) = Exit</p>
+      <hr class="divider">
+      <p><strong>Loss Exit (Stop Loss):</strong></p>
+      <p>🛑 Stop Loss hit = <strong>તરત Exit</strong></p>
+      <p>❌ Trade plan invalid = Exit</p>
+      <p>🔄 Strong opposite signal = Exit</p>
+      <hr class="divider">
+      <p><strong>Time-based Exit:</strong></p>
+      <p>🌙 <strong>1:00 AM IST</strong> પછી position ઓછો રાખો (low volume)</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📅 Daily Trading Schedule (Recommended)</h3>
+    <table class="tbl">
+      <thead><tr><th>IST Time</th><th>Activity</th></tr></thead>
+      <tbody>
+        <tr><td>6:00 AM – 7:00 AM</td><td>Market review, overnight moves check</td></tr>
+        <tr><td>9:00 AM – 11:00 AM</td><td>Asian session – Range trade (optional)</td></tr>
+        <tr><td>1:00 PM – 2:00 PM</td><td>London open – Breakout prepare</td></tr>
+        <tr><td>6:00 PM – 6:30 PM</td><td>🔍 Pre-US session – Setup identify</td></tr>
+        <tr><td><strong>6:30 PM – 11:00 PM</strong></td><td>✅ <strong>MAIN TRADING TIME – Best Entry/Exit</strong></td></tr>
+        <tr><td>11:00 PM – 1:00 AM</td><td>Monitor only, no new trades</td></tr>
+        <tr><td>1:00 AM+</td><td>🛑 Close positions, rest</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 3: STRATEGY -->
+<div id="page-strategy" class="page">
+  <div class="tab-btns">
+    <button class="tab-btn active" onclick="showTab(this,'support')">Support/Resistance</button>
+    <button class="tab-btn" onclick="showTab(this,'trend')">Trend Following</button>
+    <button class="tab-btn" onclick="showTab(this,'scalp')">Scalping</button>
+  </div>
+
+  <div id="tab-support" class="tab-content active">
+    <div class="card">
+      <h3>📐 Support & Resistance Strategy</h3>
+      <div class="success-box"><p>✅ Beginner માટે Best – Simple અને Effective</p></div>
+      <div class="step-row"><span class="step-num">1</span><div><strong>Support identify:</strong><p>Price bar-bar જ્યાંથી bounce થઈ ઊભો, તે Support level.</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div><strong>Entry (Long):</strong><p>Price support ટચ કરી bullish candle close → Buy entry. Stop Loss: support ની 1-2% નીચે.</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div><strong>Entry (Short):</strong><p>Price resistance ટચ કરી bearish candle → Sell entry. Stop Loss: resistance ની 1-2% ઉપર.</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div><strong>Exit:</strong><p>Target = Support-Resistance ના range ના 70-80%. RSI 70+ = Exit signal.</p></div></div>
+    </div>
+  </div>
+
+  <div id="tab-trend" class="tab-content">
+    <div class="card">
+      <h3>📈 Trend Following Strategy</h3>
+      <div class="success-box"><p>✅ Strong Market Moves (Bull/Bear) – Medium term</p></div>
+      <div class="step-row"><span class="step-num">1</span><div><strong>Trend confirm:</strong><p>EMA 20 > EMA 50 = Uptrend. EMA 20 &lt; EMA 50 = Downtrend. (1hr chart use કરો)</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div><strong>Entry:</strong><p>Uptrend: Price EMA 20 ને touch કરી ઉપર bounce = Long entry. Downtrend: Reverse.</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div><strong>Stop Loss:</strong><p>EMA 50 ની નીચે/ઉપર (Uptrend/Downtrend)</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div><strong>Exit:</strong><p>EMA 20 cross EMA 50 opposite side = Exit. અથવા previous high/low break.</p></div></div>
+    </div>
+  </div>
+
+  <div id="tab-scalp" class="tab-content">
+    <div class="card">
+      <h3>⚡ Scalping Strategy</h3>
+      <div class="warn-box"><p>⚠️ Advanced – Fast moves, 5-15 min chart. નવા traders ટાળો.</p></div>
+      <div class="step-row"><span class="step-num">1</span><div><strong>Best Time:</strong><p>6:30 PM – 9:00 PM IST (high volume). 5min chart use.</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div><strong>Entry:</strong><p>Momentum candle + Volume spike + RSI 50 cross → Quick entry.</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div><strong>Stop Loss:</strong><p>Tight – 0.3% to 0.5% only.</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div><strong>Exit:</strong><p>Target: 0.5–1% profit. Maximum 15-30 min hold. Time limit ઓળંગ્યે Exit.</p></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📊 Indicators Checklist</h3>
+    <div class="grid3">
+      <div class="mini-card"><div class="label">RSI (14)</div><div class="val">30 = Buy zone<br>70 = Sell zone</div></div>
+      <div class="mini-card"><div class="label">MACD</div><div class="val">Cross above = Long<br>Cross below = Short</div></div>
+      <div class="mini-card"><div class="label">Volume</div><div class="val">Spike = Strong move<br>Low = Fake move</div></div>
+      <div class="mini-card"><div class="label">EMA 20/50</div><div class="val">Trend direction<br>Support/Resist</div></div>
+      <div class="mini-card"><div class="label">Bollinger</div><div class="val">Band touch = Reversal<br>Squeeze = Breakout</div></div>
+      <div class="mini-card"><div class="label">OI (Open Int.)</div><div class="val">Rising = Strong<br>Falling = Weak</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: RISK MANAGEMENT -->
+<div id="page-risk" class="page">
+  <div class="card">
+    <h3>🛡️ Risk Management – સૌથી Important</h3>
+    <div class="danger-box"><p>⚠️ Risk manage ન કરો = Account blow. 90% beginners આ જ ભૂલ કરે.</p></div>
+    <div class="grid2">
+      <div class="mini-card"><div class="label">Per Trade Risk</div><div class="val" style="color: var(--color-text-success)">Max 1-2%</div><p style="margin-top:4px">₹10,000 account = Max ₹200 loss per trade</p></div>
+      <div class="mini-card"><div class="label">Daily Loss Limit</div><div class="val" style="color: var(--color-text-danger)">Max 3-5%</div><p style="margin-top:4px">Limit hit = Day stop, no more trades</p></div>
+      <div class="mini-card"><div class="label">Leverage</div><div class="val" style="color: var(--color-text-warning)">2x – 5x max</div><p style="margin-top:4px">Beginners: 2-3x use કરો</p></div>
+      <div class="mini-card"><div class="label">Stop Loss</div><div class="val" style="color: var(--color-text-success)">Always set</div><p style="margin-top:4px">Entry સાથે જ SL set – Move ન કરો</p></div>
+    </div>
+    <hr class="divider">
+    <h3>Risk:Reward Ratio</h3>
+    <table class="tbl">
+      <thead><tr><th>Strategy</th><th>Risk</th><th>Target</th><th>Ratio</th></tr></thead>
+      <tbody>
+        <tr><td>Conservative</td><td>1%</td><td>2%</td><td><span class="badge badge-green">1:2</span></td></tr>
+        <tr><td>Moderate</td><td>1%</td><td>3%</td><td><span class="badge badge-green">1:3</span></td></tr>
+        <tr><td>Aggressive</td><td>2%</td><td>4%</td><td><span class="badge badge-amber">1:2</span></td></tr>
+      </tbody>
+    </table>
+    <div class="success-box" style="margin-top:12px"><p>✅ Minimum 1:2 ratio maintain કરો – 50% win rate પણ profitable!</p></div>
+  </div>
+
+  <div class="card">
+    <h3>📝 Trade Journal – Daily Record</h3>
+    <p>દરરોજ આ note down કરો:</p>
+    <p>📌 Entry price, Exit price, Stop Loss</p>
+    <p>📌 Reason for trade, Indicator used</p>
+    <p>📌 Profit/Loss amount</p>
+    <p>📌 What went right / What went wrong</p>
+    <div class="success-box"><p>✅ Journal = Best teacher. 30 days track = Pattern visible.</p></div>
+  </div>
+</div>
+
+<!-- PAGE 5: MISTAKES -->
+<div id="page-mistakes" class="page">
+  <div class="card">
+    <h3>⚠️ Common ભૂલો – ટાળો</h3>
+    <div class="danger-box"><p>❌ <strong>Stop Loss ન મૂકવો</strong> – Loss unlimited થઈ જાય, account wipe.</p></div>
+    <div class="danger-box"><p>❌ <strong>High Leverage (20x-100x)</strong> – Beginner ક્યારેય નહીં. 1 candle ≠ liquidation.</p></div>
+    <div class="danger-box"><p>❌ <strong>FOMO Trade</strong> – Price ઝડપથી ઉપર ગઈ = Panic buy. Almost always loss.</p></div>
+    <div class="danger-box"><p>❌ <strong>Revenge Trade</strong> – Loss પછી ગુસ્સામાં trade = Double loss.</p></div>
+    <div class="danger-box"><p>❌ <strong>Over-trading</strong> – ઘણા trades = Fees + Stress + Loss.</p></div>
+    <div class="danger-box"><p>❌ <strong>News time Overexposure</strong> – CPI, FOMC, Fed news = Extreme volatile. New trader: avoid position.</p></div>
+    <div class="warn-box"><p>⚠️ <strong>Unverified Signals</strong> – Telegram/YouTube "guru" signals follow ન કરો.</p></div>
+    <div class="warn-box"><p>⚠️ <strong>Weekend ઓછો Volume</strong> – Saturday/Sunday: low liquidity, choppy. Careful.</p></div>
+  </div>
+
+  <div class="card">
+    <h3>🗓️ Beginner Week 1–4 Plan</h3>
+    <div class="step-row"><span class="step-num">1</span><div><strong>Week 1:</strong><p>Paper trade / Demo only. Charts study. Indicators learn.</p></div></div>
+    <div class="step-row"><span class="step-num">2</span><div><strong>Week 2:</strong><p>Real trade – very small size (₹500–₹1000). 1-2 trades max daily.</p></div></div>
+    <div class="step-row"><span class="step-num">3</span><div><strong>Week 3:</strong><p>Review journal. Patterns identify. Strategy refine.</p></div></div>
+    <div class="step-row"><span class="step-num">4</span><div><strong>Week 4:</strong><p>Consistent strategy apply. Capital slowly increase.</p></div></div>
+    <div class="success-box"><p>✅ <strong>Goal: Consistency, not quick profit.</strong> 1 month consistent = Life-long skill.</p></div>
+  </div>
+</div>
+  </div>
+</div>
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('on'));
+  document.getElementById('page-'+id).classList.add('on');
+  event.target.classList.add('on');
+}
+function showTab(btn, id) {
+  btn.closest('.section') || btn.parentElement.parentElement;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
